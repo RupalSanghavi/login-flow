@@ -36,6 +36,7 @@ import { browserHistory } from 'react-router';
  */
 export function login(username, password) {
   return (dispatch) => {
+    console.log("dlfjsl");
     // Show the loading indicator, hide the last error
     dispatch(sendingRequest(true));
     removeLastFormError();
@@ -59,7 +60,8 @@ export function login(username, password) {
         return;
       }
       // Use auth.js to fake a request
-      auth.login(username, hash, (success, err) => {
+      auth.login(username, password, (success, err) => {
+
         // When the request is finished, hide the loading indicator
         dispatch(sendingRequest(false));
         dispatch(setAuthState(success));

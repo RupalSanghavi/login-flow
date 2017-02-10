@@ -32,6 +32,7 @@ export default class LoginPage extends Component {
   }
 
 	_login(username, password) {
+		console.log("sdfl")
 		this.props.dispatch(login(username, password));
 	}
 }

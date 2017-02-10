@@ -17,6 +17,7 @@ var fakeRequest = {
     setTimeout(() => {
       switch (endpoint) {
         case '/login':
+          debugger;
           server.login(data.username, data.password, callback);
           break;
         case '/register':

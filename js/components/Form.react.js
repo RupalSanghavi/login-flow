@@ -74,6 +74,7 @@ class LoginForm extends Component {
 
   // onSubmit call the passed onSubmit function
   _onSubmit(evt) {
+    console.log("HI")
     evt.preventDefault();
     this.props.onSubmit(this.props.data.username, this.props.data.password);
   }
